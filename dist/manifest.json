@@ -1,0 +1,26 @@
+{
+  "testId": "simple-web-addon-test",
+  "name": "Simple Web Addon",
+  "version": "1.0.0",
+  "manifestVersion": 2,
+  "requirements": {
+    "apps": [
+      {
+        "name": "Express",
+        "apiVersion": 1
+      }
+    ]
+  },
+  "entryPoints": [
+    {
+      "type": "panel",
+      "id": "panel1",
+      "main": "index.html",
+      "documentSandbox": "code.js",
+      "permissions": {
+        "sandbox": ["allow-downloads"],
+        "oauth": ["localhost:8000"]
+      }
+    }
+  ]
+}

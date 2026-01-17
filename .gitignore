@@ -9,8 +9,7 @@ venv/
 ENV/
 .venv
 
-# Distribution / packaging
-dist/
+# Distribution / packaging (Python only - keep dist/ folder for frontend)
 build/
 *.egg-info/
 

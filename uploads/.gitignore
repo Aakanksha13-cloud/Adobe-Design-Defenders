@@ -1,4 +1,0 @@
-# Ignore all files in uploads folder except this .gitignore and README
-*
-!.gitignore
-!README.md
