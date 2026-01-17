@@ -1,0 +1,7 @@
+{
+  "access_token": "YOUR_ACCESS_TOKEN_HERE",
+  "client_id": "YOUR_CLIENT_ID_HERE",
+  "client_secret": "YOUR_CLIENT_SECRET_HERE",
+  "redirect_uri": "http://localhost:8000/callback",
+  "token_expires_at": "2026-03-17T18:17:06.196594"
+}

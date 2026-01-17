@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandflowAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <sp-theme scale="medium" color="light" system="express">
+        <div class="publisher-container">
+            <!-- Header -->
+            <header class="publisher-header">
+                <div class="header-left">
+                    <img src="logo.jpg" alt="BrandflowAI Logo" class="header-logo">
+                </div>
+                <div class="header-right">
+                    <button class="linkedin-btn" id="linkedinBtn" title="Post to LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                        </svg>
+                    </button>
+                    <button class="slack-btn" id="slackBtn" title="Send to Slack">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+                        </svg>
+                    </button>
+                    <button class="jira-btn" id="jiraBtn" title="Send Team Notification">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.004 0c-2.35 0-4.264 1.916-4.264 4.266v7.464L2.488 17l5.252 5.254 5.265-5.266h7.464c2.35 0 4.264-1.916 4.264-4.266V4.266C24.733 1.916 22.817 0 20.469 0H12.004zm0 3.072h8.465c.66 0 1.193.533 1.193 1.194v8.456c0 .66-.533 1.193-1.193 1.193h-8.465L7.74 9.65l4.264-4.264V3.072z"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="publisher-main">
+                <div class="branding">
+                    <h2 class="brand-title">BrandflowAI</h2>
+                    <div class="brand-underline"></div>
+                </div>
+
+                <!-- Input Section -->
+                <div class="input-section">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="contentInput" 
+                            class="content-input" 
+                            placeholder="✍️ Describe your design idea... (e.g., Create a summer sale announcement)"
+                            rows="3"
+                        ></textarea>
+                    </div>
+
+                    <!-- AI Toggle -->
+                    <div class="ai-toggle-container">
+                        <label class="ai-toggle-label">
+                            <span class="toggle-text">🤖 Analyze past posts by AI</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="aiToggle" checked>
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </label>
+                        <button class="analyze-btn" id="analyzeBtn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 3v18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M7 14l4-4 3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Run Analysis
+                        </button>
+                    </div>
+
+                    <!-- Feature Buttons -->
+                    <div class="feature-buttons">
+                        <button class="feature-btn" id="complianceBtn">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-label">Compliance Checker</span>
+                        </button>
+                        <button class="feature-btn" id="copyrightBtn">
+                            <span class="feature-icon">©</span>
+                            <span class="feature-label">Copyrighter</span>
+                        </button>
+                        <button class="feature-btn" id="brandImageBtn">
+                            <span class="feature-icon">📎</span>
+                            <span class="feature-label">Brand Image</span>
+                            <input type="file" id="brandImageInput" class="hidden-file-input" accept="image/*,.csv" />
+                        </button>
+                        <button class="feature-btn" id="brandGuidelinesBtn">
+                            <span class="feature-icon">+</span>
+                            <span class="feature-label">Brand Guidelines</span>
+                            <input type="file" id="brandGuidelinesInput" class="hidden-file-input" accept=".pdf,.doc,.docx,.txt" />
+                        </button>
+                    </div>
+
+                    <!-- Create Button -->
+                    <button class="create-btn" id="createBtn">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 4L12 8L16 9L13 12L14 16L10 14L6 16L7 12L4 9L8 8L10 4Z" fill="currentColor"/>
+                        </svg>
+                        CREATE
+                    </button>
+                </div>
+            </main>
+        </div>
+    </sp-theme>
+
+    <!-- Slack Message Popup -->
+    <div id="slackPopup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>📨 Send Message to Slack</h3>
+                <button class="popup-close" id="slackPopupClose">×</button>
+            </div>
+            <div class="popup-body">
+                <textarea 
+                    id="slackMessageInput" 
+                    class="slack-message-input" 
+                    placeholder="Type your message here..."
+                    rows="4"
+                ></textarea>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn popup-btn-cancel" id="slackCancelBtn">Cancel</button>
+                <button class="popup-btn popup-btn-primary" id="slackSendBtn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Send to Slack
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Notification Popup (Jira-style) -->
+    <div id="jiraPopup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>📢 Send Team Notification</h3>
+                <button class="popup-close" id="jiraPopupClose">×</button>
+            </div>
+            <div class="popup-body">
+                <textarea 
+                    id="jiraMessageInput" 
+                    class="slack-message-input" 
+                    placeholder="Type your team notification here..."
+                    rows="4"
+                ></textarea>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn popup-btn-cancel" id="jiraCancelBtn">Cancel</button>
+                <button class="popup-btn popup-btn-jira" id="jiraSendBtn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="margin-right: 6px;">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Notify Team
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

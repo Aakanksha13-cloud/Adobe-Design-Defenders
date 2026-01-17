@@ -1,0 +1,6 @@
+{
+  "jira_url": "https://designdefenders.atlassian.net",
+  "jira_email": "YOUR_JIRA_EMAIL_HERE",
+  "jira_api_token": "YOUR_JIRA_API_TOKEN_HERE",
+  "jira_project_key": "SCRUM"
+}
