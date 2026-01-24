@@ -11,8 +11,8 @@ from datetime import datetime
 # ============================================
 # CONFIGURATION
 # ============================================
-CLIPDROP_API_KEY = "c52c0d1df2524a3c648751280b06e1563e726420ec032ef11a920627de0f6a5d47d200f99f81ad7950fbe1923aa19028"
-GEMINI_API_KEY = "AIzaSyBNoSDFPo81KRwLL5W9WlXNmgkMbaQ6Hfg"
+CLIPDROP_API_KEY = ""
+GEMINI_API_KEY = ""
 
 OUTPUT_DIR = Path(__file__).parent.parent / "uploads" / "generated_images"
 OUTPUT_DIR.mkdir(exist_ok=True)
@@ -230,3 +230,4 @@ def generate_design_from_text(user_request: str) -> dict:
         import traceback
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"Generation failed: {str(e)}")
+
